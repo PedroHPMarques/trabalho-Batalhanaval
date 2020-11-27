@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABULEIRO</title>
+    <style>
+        .fog{
+            background-color: gray;
+            color: gray;
+        }
+        .agua{
+            background-color:blue;
+        }
+        .hit{
+            border: solid 1px red;
+        }
+        .sub{
+            background-color: rgb(245, 245, 16);
+            color: purple
+            }
+         .dest{
+             background-color: black;
+             color: orange;
+         }
+         .cru{
+             background-color: pink;
+             color:green;
+         }   
+         .cour{
+             background-color: rgb(168, 240, 109);
+             color: rgb(58, 4, 4);
+         }
+         .pta{
+             background-color: white;
+             color: tomato;
+         }
+         th{
+             background-color: ghostwhite;
+         }
+    </style>
+</head>
+<body>
+    <h1>TABULEIRO</h1>
+    <table >
+    <caption>Batalha Naval</caption>
+    <thead>
+        <tr>
+            <th> </th>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+            <th>E</th>
+            <th>F</th>
+            <th>G</th>
+            <th>H</th>
+            <th>I</th>
+            <th>J</th>
+            <th>K</th>
+        </tr>
+    </thead>
+    <tbody class = "fog"> 
+            <tr>
+                <th>0</th>
+                <td>S</td>
+                <td></td>
+                <td>C</td>
+                <td></td>
+                <td>O</td>
+                <td></td>
+                <td></td>
+                <td>D</td>
+                <td></td>
+                <td>O</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td>S</td>
+                <td></td>
+                <td>C</td>
+                <td></td>
+                <td>O</td>
+                <td></td>
+                <td></td>
+                <td>D</td>
+                <td></td>
+                <td>O</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td></td>
+                <td></td>
+                <td>C</td>
+                <td></td>
+                <td>O</td>
+                <td></td>
+                <td></td>
+                <td>D</td>
+                <td></td>
+                <td>O</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td></td>
+                <td></td>
+                <td>C</td>
+                <td></td>
+                <td>O</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>O</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td>D</td>
+                <td>D</td>
+                <td>D</td>
+                <td></td>
+                <td>O</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <th>5</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>S</td>
+                <td>S</td>
+                <td></td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td></td>
+                <td>S</td>
+                <td>S</td>
+                <td></td>
+                <td>P</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>C</td>
+            </tr>
+            <tr>
+            <th>7</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>P</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <th>8</th>
+            <td>S</td>
+            <td>S</td>
+            <td></td>
+            <td>P</td>
+            <td>P</td>
+            <td>P</td>
+            <td></td>
+            <td>D</td>
+            <td></td>
+            <td></td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <th>9</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>D</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>10</th>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>D</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+    <script>
+        function aplicaestilo(){
+            let celula = document.querySelectorALL('td');
+                for(let i=0; i < celula.length; i++){
+                   const celulaAguaemb = celula[i];
+                    if(celulaAguaemb.textContent == 'S'){
+                        celulaAguaemb.classList.add("sub");
+                    }
+                    if(celulaAguaemb.textContent == 'C'){
+                        celulaAguaemb.classList.add('cru');
+                    }
+                    if(celulaAguaemb.textContent == 'D'){
+                        celulaAguaemb.classList.add('dest');
+                    }
+                    if(celulaAguaemb.textContent == 'O'){
+                        celulaAguaemb.classList.add('cour');
+                    }
+                    if(celulaAguaemb.textContent == 'P'){
+                        celulaAguaemb.classList.add('pta');
+                    }
+                    if(celulaAguaemb.textContent == ''){
+                        celulaAguaemb.classList.add('agua');
+                    }
+                }
+              }
+              aplicaestilo();
+
+              function aplicaGeral(){
+            let celula2 = document.querySelectorAll('td');
+            for(let i=0; i < celula.length; i++){
+                const celula2Fog = celula[i];
+                celula2Fog.classList.toggle('fog');
+            }
+        }
+        aplicaGeral();
+
+
+    </script>
+</body>
+</html>
