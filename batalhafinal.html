@@ -275,6 +275,21 @@
             for(let i = 0;i < celula.length;i++){
                 celula[i].addEventListener("click", removeFog ,false)
             }
+            function removeFog(){
+            if(celula[i].classList.contains("fog")){
+                adicionaTiro();
+            }
+
+            if (celula[i].classList.contains("water")) {}
+            else {
+                if (celula[i].classList.contains("hit")) {}
+                else {
+                    adicionaPontos();
+                }
+                celula[i].classList.add("hit");
+            }
+            celula[i].classList.remove("fog");
+        }
 
     </script>
 </body>
