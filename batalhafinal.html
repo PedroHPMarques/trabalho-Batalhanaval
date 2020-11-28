@@ -60,7 +60,7 @@
             <th>K</th>
         </tr>
     </thead>
-    <tbody class = "fog"> 
+    <tbody class="fog"> 
             <tr>
                 <th>0</th>
                 <td>S</td>
@@ -250,10 +250,10 @@
               aplicaestilo();
 
               function aplicaGeral(){
-            let celula2 = document.querySelectorAll('td');
+            let celula = document.querySelectorAll("td");
             for(let i=0; i < celula.length; i++){
-                const celula2Fog = celula[i];
-                celula2Fog.classList.toggle('fog');
+                const celulaFog = celula[i];
+                celulaFog.classList.toggle("fog");
             }
         }
         aplicaGeral();
