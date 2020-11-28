@@ -262,18 +262,9 @@
         let contadorTiros = 0;
         let contadorPontos = 0;
 
-            function adicionaTiros(){
-                contadorTiros = contadorTiros +1;
-                 marcador[0].textContent = "Tiros: " + contadorTiros;
-            }
-            function adicionaPontos(){
-                contadorPontos = contadorPontos +1;
-                marcador[1].textContent = "Pontos: " + contadorPontos;
-            }
-
-            let celula = document.querySelectorAll('td');
+            let celula = document.querySelectorAll("td");
             for(let i = 0;i < celula.length;i++){
-                celula[i].addEventListener("click", removeFog ,false)
+                celula[i].addEventListener("click", removeFog ,false);
             }
             function removeFog(){
             if(celula[i].classList.contains("fog")){
@@ -289,6 +280,14 @@
                 celula[i].classList.add("hit");
             }
             celula[i].classList.remove("fog");
+        }
+        function adicionaTiros(){
+            contadorTiros = contadorTiros +1;
+             marcador[0].textContent = "Tiros: " + contadorTiros;
+        }
+        function adicionaPontos(){
+            contadorPontos = contadorPontos +1;
+            marcador[1].textContent = "Pontos: " + contadorPontos;
         }
 
     </script>
