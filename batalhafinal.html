@@ -224,26 +224,26 @@
 
     <script>
         function aplicaestilo(){
-            let celula = document.querySelectorALL('td');
+            let celula = document.querySelectorALL("td");
                 for(let i=0; i < celula.length; i++){
                    const celulaAguaemb = celula[i];
-                    if(celulaAguaemb.textContent == 'S'){
+                    if(celulaAguaemb.textContent == "S"){
                         celulaAguaemb.classList.add("sub");
                     }
-                    if(celulaAguaemb.textContent == 'C'){
-                        celulaAguaemb.classList.add('cru');
+                    if(celulaAguaemb.textContent == "C"){
+                        celulaAguaemb.classList.add("cru");
                     }
-                    if(celulaAguaemb.textContent == 'D'){
-                        celulaAguaemb.classList.add('dest');
+                    if(celulaAguaemb.textContent == "D"){
+                        celulaAguaemb.classList.add("dest");
                     }
-                    if(celulaAguaemb.textContent == 'O'){
-                        celulaAguaemb.classList.add('cour');
+                    if(celulaAguaemb.textContent == "O"){
+                        celulaAguaemb.classList.add("cour");
                     }
-                    if(celulaAguaemb.textContent == 'P'){
-                        celulaAguaemb.classList.add('pta');
+                    if(celulaAguaemb.textContent == "P"){
+                        celulaAguaemb.classList.add("pta");
                     }
-                    if(celulaAguaemb.textContent == ''){
-                        celulaAguaemb.classList.add('agua');
+                    if(celulaAguaemb.textContent == ""){
+                        celulaAguaemb.classList.add("agua");
                     }
                 }
               }
@@ -258,7 +258,7 @@
         }
         aplicaGeral();
 
-        let marcador = document.querySelectorALL('h2');
+        let marcador = document.querySelectorALL("h2");
         let contadorTiros = 0;
         let contadorPontos = 0;
 
@@ -271,7 +271,7 @@
                 adicionaTiro();
             }
 
-            if (celula[i].classList.contains("water")) {}
+            if (celula[i].classList.contains("agua")) {}
             else {
                 if (celula[i].classList.contains("hit")) {}
                 else {
