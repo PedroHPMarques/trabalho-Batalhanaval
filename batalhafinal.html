@@ -218,6 +218,10 @@
         </tr>
     </tbody>
 </table>
+    <h2>Tiros: 0</h2>
+    <h2>Pontos: 0</h2>
+
+
     <script>
         function aplicaestilo(){
             let celula = document.querySelectorALL('td');
@@ -254,6 +258,23 @@
         }
         aplicaGeral();
 
+        let marcador = document.querySelectorALL('h2');
+        let contadorTiros = 0;
+        let contadorPontos = 0;
+
+            function adicionaTiros(){
+                contadorTiros = contadorTiros +1;
+                 marcador[0].textContent = "Tiros: " + contadorTiros;
+            }
+            function adicionaPontos(){
+                contadorPontos = contadorPontos +1;
+                marcador[1].textContent = "Pontos: " + contadorPontos;
+            }
+
+            let celula = document.querySelectorAll('td');
+            for(let i = 0;i < celula.length;i++){
+                celula[i].addEventListener("click", removeFog ,false)
+            }
 
     </script>
 </body>
